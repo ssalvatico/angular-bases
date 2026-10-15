@@ -1,0 +1,12 @@
+#counterChanger {
+    margin: 0px 1px;
+    background-color: bisque;
+    padding: 3px 8px;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: black;
+}
+
+#counterChanger:hover {
+    background-color: rgb(219, 196, 168);
+}
