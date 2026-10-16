@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
-export class App {
+export class AppComponent {
   protected readonly title = 'Primer App de Angular';
   protected readonly welcome = 'Bienvenido!';
 }

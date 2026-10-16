@@ -1,0 +1,35 @@
+
+<h3>Listado de Héroes</h3>
+
+<h3>Héroe borrado
+    <small style="color: red; background-color: silver;">
+        {{lastDeletedHero}}
+    </small> 
+</h3>
+
+@if (!lastDeletedHero) {
+    <small>No se eliminó nadie</small>
+    <br>
+}
+
+<button
+    class="btn btn-outline-danger"
+    (click)="deleteLastHero()"
+    >
+    Borrar último héroe
+</button>
+
+<button
+    class="btn btn-outline-success mx-2"
+    (click)="heroNames = ['Spiderman','Ironman','Hulk','Thor','Sentry', 'Daredevil']"
+    >
+    Reset List
+</button>
+
+<ul class="mt-2 list-group">
+    @for (item of heroNames; track $index) {
+        <li class="list-group-item"><strong>{{ $index }} - {{item}}</strong></li>
+    }
+</ul>
+
+<hr>
