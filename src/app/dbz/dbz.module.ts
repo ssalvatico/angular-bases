@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+
 import { DBZMainPageComponent } from './pages/main.page.component';
-import { CharacterListComponent } from './components/character-list/character-list.component';
 import { AddCharacterComponent } from './components/add-character/add-character.component';
+import { CharacterListComponent } from './components/character-list/character-list.component';
 
 @NgModule({
   declarations: [
@@ -10,7 +12,7 @@ import { AddCharacterComponent } from './components/add-character/add-character.
     CharacterListComponent,
     AddCharacterComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   exports: [DBZMainPageComponent],
 })
 export class DbzModule {}

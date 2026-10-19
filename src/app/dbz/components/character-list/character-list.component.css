@@ -1,0 +1,13 @@
+#delete{
+    border-radius: 4px;
+    padding: 0px 7px;
+    background-color: #ff2c2c;
+    color: #fafafa;
+    font-weight: bold;
+    border-color: rgb(0, 0, 0);
+    border-width: 3px;
+}
+
+#delete:hover{
+    background-color: brown;
+}
