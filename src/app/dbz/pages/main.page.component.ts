@@ -10,6 +10,20 @@ import { DBZService } from '../services/dbz.service';
 export class DBZMainPageComponent {
 
     // Servicio inyectado
-    //TODO convertir el servicio en un servicio privado
-    constructor( public dbzService: DBZService) {}
+    // Debe ser privado
+    constructor( private dbzService: DBZService) {}
+    
+    get characters(): CharacterInterface[] {
+        // retorno una copia por las dudas de que se modifique el objeto
+        // asi no se modifica en el servicio
+        return [...this.dbzService.characters];
+    }
+
+    deleteCharacterById(id:string): void {
+        this.dbzService.deleteCharacterById(id);
+    }
+
+    addCharacter(character:CharacterInterface): void {
+        this.dbzService.addCharacter(character);
+    }
 }

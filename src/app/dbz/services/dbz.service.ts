@@ -36,7 +36,7 @@ export class DBZService {
         ki: 20000,
     }];
 
-    onNewCharacter(character:CharacterInterface):void {
+    addCharacter(character:CharacterInterface):void {
         const newCharacter:CharacterInterface = {...character, id: uuid() };
         this.characters = [...this.characters, newCharacter];
     }
